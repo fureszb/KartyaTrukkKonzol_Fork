@@ -2,12 +2,17 @@ package modell;
 
 
 public class Pakli {
-
-    public String[] getPakli() {
+      
+     Lap[] pakli;
+    public Lap[] getPakli() {
         return pakli;
     }
-    
-     String[] pakli = new String[22];
+
+    public Pakli(){
+        pakli = new Lap[22];
+    }
+   
+     
 
     public void feltolt() {
         String[] szinek = {"P", "T", "Z", "M"};
@@ -15,17 +20,16 @@ public class Pakli {
         int i = 1;
         for (String szin : szinek) {
             for (int e = 0; e < ertekek.length && i < pakli.length; e++) {
-                pakli[i++] = szin + "_" + ertekek[e];
+                pakli[i++] = new Lap(szin + "_" + ertekek[e]);
             }
         }
 
     }
-
   
 
     public void kever(int oszlop) {
         // mindig középre a választott
-        String[] ujPakli = new String[22];
+        Lap[] ujPakli = new Lap[22];
         switch (oszlop) {
             case 1:
                 for (int i = 1; i <= 7; i++) {
@@ -52,7 +56,7 @@ public class Pakli {
         pakli = ujPakli;
     }
 
-    public String ezVolt() {
+    public Lap ezVolt() {
         return pakli[11];
     }
 

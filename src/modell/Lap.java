@@ -9,8 +9,10 @@ public class Lap {
         this.leiras = leiras;
     }
 
-    public String Lap() {
-        return "";
+    @Override
+    public String toString() {
+        return leiras;
     }
+    
 
 }
