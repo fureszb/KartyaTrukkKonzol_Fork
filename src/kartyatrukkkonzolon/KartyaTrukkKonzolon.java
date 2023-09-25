@@ -9,8 +9,8 @@ public class KartyaTrukkKonzolon {
 
     public static void main(String[] args) {
         
-        KartyaTrukk k1 = new KartyaTrukk();
-        k1.indit();
+        KartyaTrukk kartya = new KartyaTrukk();
+        kartya.indit();
     }
 
 
